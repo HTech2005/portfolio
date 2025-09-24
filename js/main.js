@@ -227,35 +227,37 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form
+// Contact form with EmailJS
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simple form validation
-    const name = this.name.value.trim();
-    const email = this.email.value.trim();
-    const message = this.message.value.trim();
-    
-    if (!name || !email || !message) {
-        alert('Veuillez remplir tous les champs requis.');
-        return;
-    }
-    
-    // Simulate form submission
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-    submitBtn.disabled = true;
-    
-    setTimeout(() => {
-        alert('Message envoyé avec succès! Je vous répondrai bientôt.');
-        this.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+        submitBtn.disabled = true;
+
+        // ⚡ Remplace par tes identifiants EmailJS
+        const serviceID = "service_3c9sgxh";
+        const templateID = "template_jjzei9v";
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                alert('✅ Message envoyé avec succès ! Je vous répondrai bientôt.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            })
+            .catch((err) => {
+                console.error("Erreur EmailJS:", err);
+                alert("❌ Une erreur est survenue. Réessaie plus tard.");
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+    });
+}
 
 // Typing animation for hero subtitle
 const heroSubtitle = document.querySelector('.hero-subtitle');

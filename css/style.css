@@ -692,6 +692,30 @@ textarea.form-control {
     resize: vertical;
 }
 
+@media (max-width: 480px) {
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-details h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-details p {
+        font-size: 0.9rem;
+    }
+    
+    .form-control {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
+}
+
 /* =================== FOOTER =================== */
 .footer {
     background: var(--dark);
