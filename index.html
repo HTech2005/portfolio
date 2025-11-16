@@ -23,7 +23,7 @@
                 <li><a href="#home" class="nav-link active">Accueil</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#portfolio" class="nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -68,7 +68,7 @@
                     <h3>Passionné par l'innovation et le monde de la tech</h3>
                     <p>
                         Élève ingénieur en Génie Informatique et Télécommunications, je suis passionné par la tech et animé par le désir constant 
-                        d’explorer les innovations qui façonnent le monde numérique de demain.
+                        d'explorer les innovations qui façonnent le monde numérique de demain.
                     </p>
                     <p>
                         Mon parcours me permet de combiner expertise technique et créativité pour concevoir des solutions modernes, efficaces et adaptées aux besoins réels. Curieux et rigoureux, 
@@ -86,11 +86,11 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>UI/UX Design</span>
-                                <span>80%</span>
+                                <span>Figma</span>
+                                <span>50%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
+                                <div class="skill-progress" data-width="50"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -100,6 +100,33 @@
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                         <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Java</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                         <div class="skill-item">
+                            <div class="skill-name">
+                                <span>VHDL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                         <div class="skill-item">
+                            <div class="skill-name">
+                                <span>SpringBoot</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
                             </div>
                         </div>
                          <div class="skill-item">
@@ -124,6 +151,16 @@
                          <div class="skill-item">
                             <div class="skill-name">
                                 <span>React Native Expo</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+
+                         <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Blender</span>
                                 <span>50%</span>
                             </div>
                             <div class="skill-bar">
@@ -210,15 +247,19 @@
                         de vos projets.
                     </p>
                 </div>
-        </section>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="section portfolio">
         <div class="container">
-            <h2 class="section-title">Mon Portfolio</h2>
+            <h2 class="section-title">Projets</h2>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="portfolio-grid">
@@ -236,16 +277,24 @@
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-category">Développement Web</div>
-                        <h3 class="portfolio-title">Plateforme E-commerce</h3>
+                        <h3 class="portfolio-title">Plateforme de gestion des activités</h3>
                         <p class="portfolio-description">
-                            Application e-commerce complète avec système de paiement, gestion des stocks et dashboard administrateur.
+                            C'est une plateforme qui permet à des entreprises de gérer leurs activités, et de générer
+                            sous forme pdf plusieurs documents relatifs à l'activité. 
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JS</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="mobile">
+                 <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" alt="Fitness App">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="E-commerce Platform">
                         <div class="portfolio-overlay">
                             <a href="#" class="portfolio-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -256,14 +305,74 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <div class="portfolio-category">Application Mobile</div>
-                        <h3 class="portfolio-title">FitTracker App</h3>
+                        <div class="portfolio-category">Développement Web</div>
+                        <h3 class="portfolio-title">Plateforme E-commerce</h3>
                         <p class="portfolio-description">
-                            Application mobile de fitness avec suivi des entraînements, nutrition et objectifs personnalisés.
+                            Plateforme qui permet à tout individu de ventre non seulement des vêtements,
+                            des produits électroniques et ménagers mais également des formations sous forme
+                            de vidéo ou fichier pdf.
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">React-TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" alt="MyExpenseTracker">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://expo.dev/accounts/harold14/projects/MyExpenseTracker/builds/f5d7b383-060f-4732-8ba7-ceaadb6bc33d" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Application Mobile</div>
+                        <h3 class="portfolio-title">MyExpenseTracker</h3>
+                        <p class="portfolio-description">
+                            Application mobile qui permet de suivre ses dépenses du quotidien.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Expo</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="portfolio-item" data-category="desktop">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" alt="Gestion Bus">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Application Desktop</div>
+                        <h3 class="portfolio-title">Gestion des bus </h3>
+                        <p class="portfolio-description">
+                            Application Desktop qui permet de gérer les bus et chauffeur d'une entreprise de 
+                            transport.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">WxWidgets</span>
+                        </div>
                     </div>
                 </div>
 
+                <!--
                 <div class="portfolio-item" data-category="design">
                     <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop" alt="Brand Identity">
@@ -282,12 +391,18 @@
                         <p class="portfolio-description">
                             Création complète d'identité visuelle incluant logo, charte graphique et supports de communication.
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe Illustrator</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">InDesign</span>
+                        </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="SaaS Dashboard">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Adjornou">
                         <div class="portfolio-overlay">
                             <a href="#" class="portfolio-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -299,14 +414,124 @@
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-category">Développement Web</div>
-                        <h3 class="portfolio-title">SaaS Dashboard</h3>
+                        <h3 class="portfolio-title">Adjornou</h3>
                         <p class="portfolio-description">
-                            Dashboard analytique avancé avec visualisations de données en temps réel et rapports personnalisables.
+                            Plateforme qui permet de gérer ses tontines et même les tontines de groupe.
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Adjornou">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Développement Web</div>
+                        <h3 class="portfolio-title">Plateforme de gestion des permis </h3>
+                        <p class="portfolio-description">
+                            Plateforme qui permet aux candidats d'avoir des informations sur le déroulement
+                            de l'examen de permis et un permis numérique après réussite à l'examen.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Facture">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://mesfactures.iwajutech.com/" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Développement Web</div>
+                        <h3 class="portfolio-title">Facture</h3>
+                        <p class="portfolio-description">
+                            Plateforme qui permet de suivre et payer ses factures de la SBEE et de la SONEB.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Orientation">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://orientation.iwajutech.com/" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Développement Web</div>
+                        <h3 class="portfolio-title">Orientation</h3>
+                        <p class="portfolio-description">
+                            Plateforme qui permet de aux nouveaux bacheliers de trouver leur orientation académique idéale.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="XRMuseeRepas">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Développement Web</div>
+                        <h3 class="portfolio-title">XRMuseeRepas</h3>
+                        <p class="portfolio-description">
+                            Plateforme qui permet de découvrir les différents mets béninois à travers une expérience en 
+                            réalité augmenté.
+                        </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">Aframe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="portfolio-item" data-category="mobile">
                     <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Travel App">
                         <div class="portfolio-overlay">
@@ -324,6 +549,12 @@
                         <p class="portfolio-description">
                             Application de voyage avec planification d'itinéraires, réservations et guides locaux intégrés.
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
                     </div>
                 </div>
 
@@ -345,8 +576,14 @@
                         <p class="portfolio-description">
                             Système de design complet avec composants réutilisables et guidelines pour une cohérence parfaite.
                         </p>
+                        <div class="portfolio-technologies">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Sketch</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Zeroheight</span>
+                        </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -449,8 +686,6 @@
     <a href="#home" class="scroll-top">
         <i class="fas fa-chevron-up"></i>
     </a>
-
-
 
     <script src="js/main.js"></script>
 
