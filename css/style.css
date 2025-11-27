@@ -61,8 +61,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* =================== NAVIGATION =================== */
@@ -272,12 +277,19 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     40% {
         transform: translateX(-50%) translateY(-10px);
     }
+
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
@@ -392,9 +404,12 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -697,20 +712,20 @@ textarea.form-control {
         width: 40px;
         height: 40px;
     }
-    
+
     .contact-details h4 {
         font-size: 1rem;
     }
-    
+
     .contact-details p {
         font-size: 0.9rem;
     }
-    
+
     .form-control {
         padding: 0.6rem 0.8rem;
         font-size: 0.9rem;
     }
-    
+
     textarea.form-control {
         min-height: 120px;
     }
@@ -787,85 +802,6 @@ textarea.form-control {
     box-shadow: var(--shadow-hover);
 }
 
-/* =================== RESPONSIVE DESIGN =================== */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--darker);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right 0.3s ease;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .portfolio-filters {
-        gap: 10px;
-    }
-    
-    .filter-btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .section {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .contact-form,
-    .service-card {
-        padding: 30px 20px;
-    }
-}
-
 /* Styles pour les technologies du portfolio */
 .portfolio-technologies {
     display: flex;
@@ -890,35 +826,4 @@ textarea.form-control {
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .portfolio-technologies {
-        gap: 6px;
-    }
-    
-    .tech-tag {
-        font-size: 0.7rem;
-        padding: 3px 10px;
-    }
-} 
-
-@media (max-width: 1024px) {
-    .nav-container {
-        padding: 0 30px;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-
-    .services-grid,
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-}
-
+/* Media queries moved to responsive.css */
