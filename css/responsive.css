@@ -37,7 +37,7 @@
         display: flex;
         z-index: 1001;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 0;
@@ -52,7 +52,7 @@
         padding: 40px;
         z-index: 1000;
     }
-    
+
     .nav-menu.active {
         right: 0;
     }
@@ -64,12 +64,12 @@
     .nav-link {
         font-size: 1.5rem;
     }
-    
+
     /* Hero Section */
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
@@ -85,27 +85,27 @@
         justify-content: center;
         max-width: 300px;
     }
-    
+
     /* Contact */
     .contact-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     /* Portfolio */
     .portfolio-filters {
         gap: 10px;
     }
-    
+
     .filter-btn {
         padding: 8px 16px;
         font-size: 0.9rem;
     }
-    
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -113,7 +113,7 @@
     .portfolio-technologies {
         gap: 6px;
     }
-    
+
     .tech-tag {
         font-size: 0.7rem;
         padding: 3px 10px;
@@ -125,12 +125,12 @@
     .section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 2rem;
         margin-bottom: 40px;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
@@ -138,7 +138,7 @@
     .hero-description {
         font-size: 1rem;
     }
-    
+
     .contact-form,
     .service-card {
         padding: 30px 20px;
@@ -149,21 +149,88 @@
         height: 40px;
         font-size: 1rem;
     }
-    
+
     .contact-details h4 {
         font-size: 1rem;
     }
-    
+
     .contact-details p {
         font-size: 0.9rem;
     }
-    
+
     .form-control {
         padding: 0.6rem 0.8rem;
         font-size: 0.9rem;
     }
-    
+
     textarea.form-control {
         min-height: 120px;
+    }
+}
+
+/* =================== ADVANCED RESPONSIVENESS =================== */
+
+/* Card Image Consistency */
+.portfolio-image,
+.portfolio-image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Typography & Spacing Refinements */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+        /* Slightly smaller base font */
+    }
+
+    .section {
+        padding: 50px 0;
+        /* Reduce vertical padding */
+    }
+
+    .container {
+        padding: 0 15px;
+        /* Reduce side padding */
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* Card Adjustments */
+    .portfolio-item,
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-info {
+        padding: 20px;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+}
+
+/* Better Grid for Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .portfolio-grid,
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
     }
 }
