@@ -256,6 +256,18 @@ body {
     box-shadow: var(--shadow);
 }
 
+.btn-cv {
+    background: #27ae60;
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-cv:hover {
+    background: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -297,7 +309,7 @@ body {
 
 /* =================== SECTIONS =================== */
 .section {
-    padding: 100px 0;
+    padding: 120px 0;
     position: relative;
 }
 
