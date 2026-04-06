@@ -1,0 +1,53 @@
+.navbar {
+  position: fixed; top: 0; left: 0; width: 100%;
+  padding: 20px 0;
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.navbar.scrolled { padding: 15px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem; font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+
+.nav-link {
+  background: none; border: none; color: var(--white);
+  font-weight: 500; font-size: 1rem; cursor: pointer;
+  position: relative; transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
+  padding: 0;
+}
+.nav-link::after {
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 0; height: 2px; background: var(--gradient); transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.hamburger {
+  display: none; flex-direction: column; cursor: pointer; gap: 4px;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { width: 25px; height: 3px; background: var(--white); transition: all 0.3s ease; display: block; }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; z-index: 1001; }
+  .nav-menu {
+    position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+    background: var(--darker); flex-direction: column;
+    justify-content: center; align-items: center;
+    transition: right 0.3s ease; padding: 40px; z-index: 1000;
+  }
+  .nav-menu.active { right: 0; }
+  .nav-menu li { margin: 15px 0; }
+  .nav-link { font-size: 1.5rem; }
+}

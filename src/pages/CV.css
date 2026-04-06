@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap');
+
+.cv-body {
+  background: #0f0f23; color: #e8f4f8; font-family: 'Outfit', sans-serif;
+  min-height: 100vh; padding: 40px; display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+}
+
+.cv-container {
+  width: 100%; max-width: 900px;
+  display: grid; grid-template-columns: 300px 1fr; gap: 30px;
+  background: rgba(255,255,255,0.05); backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 30px;
+  padding: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+  position: relative; overflow: hidden;
+}
+.cv-container::before {
+  content: ''; position: absolute; top: -50px; right: -50px;
+  width: 200px; height: 200px; background: var(--gradient);
+  filter: blur(80px); opacity: 0.2; z-index: 0;
+}
+
+.cv-sidebar { z-index: 1; display: flex; flex-direction: column; gap: 30px; }
+.cv-main { z-index: 1; }
+
+.profile-section { text-align: center; }
+.profile-img {
+  width: 150px; height: 150px; border-radius: 30px; object-fit: cover;
+  margin-bottom: 20px; border: 3px solid #667eea; padding: 5px;
+}
+.cv-name { font-size: 1.8rem; font-weight: 800; margin-bottom: 5px; color: #fff; }
+.cv-title { font-size: 1rem; color: #667eea; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+.contact-info-cv { display: flex; flex-direction: column; gap: 12px; }
+.info-item { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: #a0a0a0; }
+.info-item i { width: 30px; height: 30px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #667eea; flex-shrink: 0; }
+.info-item a { color: inherit; text-decoration: none; }
+.info-item a:hover { color: #667eea; }
+
+.section-header-cv {
+  font-size: 1.1rem; font-weight: 700; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px; color: #fff;
+}
+.section-header-cv::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
+
+.skills-section-cv { display: flex; flex-direction: column; gap: 20px; }
+.skill-group { margin-bottom: 5px; }
+.skill-category-title { font-size: 0.85rem; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600; }
+.cv-skill-item { margin-bottom: 10px; }
+.cv-skill-name { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px; }
+.cv-skill-bar { height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+.cv-skill-progress { height: 100%; background: var(--gradient); border-radius: 10px; }
+
+.cv-section { margin-bottom: 35px; }
+.experience-item { position: relative; padding-left: 30px; margin-bottom: 25px; border-left: 2px solid rgba(255,255,255,0.1); }
+.experience-item::before { content: ''; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; background: #667eea; border-radius: 50%; box-shadow: 0 0 10px #667eea; }
+.exp-date { font-size: 0.85rem; color: #667eea; font-weight: 600; margin-bottom: 4px; }
+.exp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+.exp-company { font-size: 0.9rem; color: #a0a0a0; margin-bottom: 8px; font-style: italic; }
+.exp-desc { font-size: 0.9rem; line-height: 1.6; color: #a0a0a0; }
+
+.cv-actions { display: flex; gap: 15px; }
+.print-btn, .back-btn {
+  padding: 12px 25px; border-radius: 50px; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif; font-size: 0.95rem; border: none;
+}
+.print-btn { background: var(--gradient); color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.print-btn:hover { transform: translateY(-3px); }
+.back-btn { background: rgba(255,255,255,0.1); color: #e8f4f8; border: 1px solid rgba(255,255,255,0.2); }
+.back-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
+
+@media print {
+  .cv-actions { display: none; }
+  .cv-body { padding: 0; background: white; color: black; }
+  .cv-container { box-shadow: none; border: none; max-width: 100%; background: white; padding: 20px; }
+  .cv-container::before { display: none; }
+  .cv-name, .exp-title, .section-header-cv { color: black !important; }
+  .exp-desc, .exp-company, .info-item { color: #333 !important; }
+}
+
+@media (max-width: 768px) {
+  .cv-container { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+  .cv-body { padding: 15px; }
+  .cv-name { font-size: 1.5rem; }
+  .profile-img { width: 120px; height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .cv-body { padding: 10px; }
+  .cv-container { padding: 16px; border-radius: 16px; }
+  .cv-name { font-size: 1.3rem; }
+  .cv-title { font-size: 0.85rem; }
+  .section-header-cv { font-size: 1rem; }
+  .exp-title { font-size: 1rem; }
+  .cv-actions { flex-direction: column; width: 100%; max-width: 320px; }
+  .print-btn, .back-btn { justify-content: center; width: 100%; }
+}
