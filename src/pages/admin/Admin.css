@@ -116,18 +116,25 @@ select.form-control { cursor: pointer; }
   text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;
 }
 .skill-admin-item {
-  display: flex; align-items: center;
-  gap: 10px; margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.skill-admin-info {
-  flex: 1;
-}
+.skill-admin-item:last-child { border-bottom: none; margin-bottom: 0; }
+
+.skill-admin-info { width: 100%; }
 .skill-admin-name {
-  font-size: 0.88rem; font-weight: 500;
-  display: block; margin-bottom: 5px; color: var(--white);
+  font-size: 0.9rem; font-weight: 500;
+  display: block; margin-bottom: 6px; color: var(--white);
+}
+.skill-admin-row {
+  display: flex; align-items: center; gap: 10px;
 }
 .skill-bar-admin {
-  height: 6px; background: rgba(255,255,255,0.1);
+  flex: 1; height: 6px; background: rgba(255,255,255,0.1);
   border-radius: 4px; overflow: hidden;
 }
 .skill-progress-admin {
@@ -137,8 +144,10 @@ select.form-control { cursor: pointer; }
   font-size: 0.8rem; color: var(--text-light);
   white-space: nowrap; flex-shrink: 0; width: 36px; text-align: right;
 }
-.skill-admin-item .item-actions { display: flex; gap: 6px; flex-shrink: 0; }
-.skill-admin-item .item-actions .btn { padding: 6px 10px; font-size: 0.8rem; }
+.skill-admin-item .item-actions {
+  display: flex; gap: 6px; justify-content: flex-end;
+}
+.skill-admin-item .item-actions .btn { padding: 6px 12px; font-size: 0.8rem; }
 
 /* ===== MESSAGES ===== */
 .msg-count { color: var(--text-light); font-size: 0.9rem; }

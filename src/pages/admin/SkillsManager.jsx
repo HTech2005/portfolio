@@ -83,10 +83,12 @@ export default function SkillsManager() {
               <div className="skill-admin-item" key={s.id}>
                 <div className="skill-admin-info">
                   <span className="skill-admin-name">{s.name}</span>
-                  <div className="skill-bar-admin">
-                    <div className="skill-progress-admin" style={{ width: `${s.percentage}%` }} />
+                  <div className="skill-admin-row">
+                    <div className="skill-bar-admin">
+                      <div className="skill-progress-admin" style={{ width: `${s.percentage}%` }} />
+                    </div>
+                    <span className="skill-pct">{s.percentage}%</span>
                   </div>
-                  <span className="skill-pct">{s.percentage}%</span>
                 </div>
                 <div className="item-actions">
                   <button className="btn btn-outline" onClick={() => edit(s)}><i className="fas fa-edit" /></button>
