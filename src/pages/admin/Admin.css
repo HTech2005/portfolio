@@ -100,15 +100,27 @@ select.form-control { cursor: pointer; }
 .badge-status.ongoing { background: rgba(255,193,7,0.15); color: #ffc107; }
 
 /* ===== SKILLS ADMIN ===== */
-.skills-admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.skill-category-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 20px; }
+.skills-admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.skill-category-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 20px; min-width: 0; }
 .skill-cat-title { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-.skill-admin-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.skill-admin-info { flex: 1; }
-.skill-admin-name { font-size: 0.9rem; font-weight: 500; display: block; margin-bottom: 4px; }
+.skill-admin-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.skill-admin-info { flex: 1; min-width: 0; }
+.skill-admin-name { font-size: 0.9rem; font-weight: 500; display: block; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .skill-bar-admin { height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
 .skill-progress-admin { height: 100%; background: var(--gradient); border-radius: 4px; }
-.skill-pct { font-size: 0.8rem; color: var(--text-light); white-space: nowrap; }
+.skill-pct { font-size: 0.8rem; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
+.skill-admin-item .item-actions { flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .skills-admin-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .skills-admin-grid { grid-template-columns: 1fr; }
+  .skill-admin-item { flex-wrap: nowrap; }
+  .skill-admin-name { font-size: 0.85rem; }
+  .item-actions .btn { padding: 6px 10px; font-size: 0.8rem; }
+}
 
 /* ===== MESSAGES ===== */
 .msg-count { color: var(--text-light); font-size: 0.9rem; }
