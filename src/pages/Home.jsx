@@ -27,9 +27,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Timeline />
       <Services />
       <Portfolio />
-      <Timeline />
       <Contact />
       <Footer />
       <a href="#home" className={`scroll-top${showTop ? ' show' : ''}`} onClick={e => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) }}>
