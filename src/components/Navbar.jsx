@@ -10,7 +10,7 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 100)
-      const sections = ['home', 'about', 'services', 'portfolio', 'contact']
+      const sections = ['home', 'about', 'services', 'portfolio', 'parcours', 'contact']
       for (const id of sections) {
         const el = document.getElementById(id)
         if (el && window.scrollY >= el.offsetTop - 200) setActive(id)
@@ -30,10 +30,10 @@ export default function Navbar() {
       <div className="nav-container">
         <div className="logo">Harold.M</div>
         <ul className={`nav-menu${menuOpen ? ' active' : ''}`}>
-          {['home', 'about', 'services', 'portfolio', 'contact'].map(id => (
+          {['home', 'about', 'services', 'portfolio', 'parcours', 'contact'].map(id => (
             <li key={id}>
               <button className={`nav-link${active === id ? ' active' : ''}`} onClick={() => scrollTo(id)}>
-                {id === 'home' ? 'Accueil' : id === 'about' ? 'À propos' : id === 'services' ? 'Services' : id === 'portfolio' ? 'Projets' : 'Contact'}
+                {id === 'home' ? 'Accueil' : id === 'about' ? 'À propos' : id === 'services' ? 'Services' : id === 'portfolio' ? 'Projets' : id === 'parcours' ? 'Parcours' : 'Contact'}
               </button>
             </li>
           ))}

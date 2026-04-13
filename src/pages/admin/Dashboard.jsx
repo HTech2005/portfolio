@@ -4,12 +4,14 @@ import ProjectsManager from './ProjectsManager'
 import SkillsManager from './SkillsManager'
 import MessagesManager from './MessagesManager'
 import ProfileManager from './ProfileManager'
+import TimelineManager from './TimelineManager'
 import './Admin.css'
 
 const tabs = [
   { key: 'profile', label: 'Profil', icon: 'fa-user-circle' },
   { key: 'projects', label: 'Projets', icon: 'fa-folder' },
   { key: 'skills', label: 'Compétences', icon: 'fa-chart-bar' },
+  { key: 'timeline', label: 'Parcours', icon: 'fa-road' },
   { key: 'messages', label: 'Messages', icon: 'fa-envelope' },
 ]
 
@@ -51,6 +53,7 @@ export default function Dashboard() {
         {tab === 'profile' && <ProfileManager />}
         {tab === 'projects' && <ProjectsManager />}
         {tab === 'skills' && <SkillsManager />}
+        {tab === 'timeline' && <TimelineManager />}
         {tab === 'messages' && <MessagesManager />}
       </main>
     </div>

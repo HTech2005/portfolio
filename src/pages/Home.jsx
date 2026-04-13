@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
 import Portfolio from '../components/Portfolio'
+import Timeline from '../components/Timeline'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import './Home.css'
@@ -28,6 +29,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <Timeline />
       <Contact />
       <Footer />
       <a href="#home" className={`scroll-top${showTop ? ' show' : ''}`} onClick={e => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) }}>
